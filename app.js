@@ -9,7 +9,7 @@ import { generateFile } from './utils/genarateFile.js'
 import cors from 'cors'
 
 const fileAvilabe ={
-    WP:["GY2","GX2","GZ2"]
+    WP:["GY2","GX1"]
 }
 
 const __filename = fileURLToPath(import.meta.url);

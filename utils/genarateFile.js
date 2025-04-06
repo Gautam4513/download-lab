@@ -8,7 +8,7 @@ import PizZip from 'pizzip';
 
 export const generateFile = (subject, name, enRollNo, batch,__dirname) => {
     if (subject === "WP") {
-        const textContent = fs.readFileSync(path.join(__dirname, "public", "./WP/Wp.docx"), "binary");
+        const textContent = fs.readFileSync(path.join(__dirname, "public", `./WP/${batch}.docx`), "binary");
         const zip = new PizZip(textContent)
         const doc = new Docxtemplater(zip,{
             delimiters: {
