@@ -44,17 +44,18 @@ app.post("/getFile",(req,res)=>{
     }
     // const textContent = fs.readFileSync(path.join(__dirname,"public",`./${subject}/Wp.docx`),"binary");
     const buffer = generateFile(subject,name,enRollNo,batch,__dirname);
-    const outputPath = path.join(__dirname, "public", "generated.docx");
+    const outputPath = path.join(__dirname, "public", `${enRollNo}.docx`);
     fs.writeFileSync(outputPath, buffer);
 
-    res.download(path.join(__dirname,"public","generated.docx"),"generated.docx",(err)=>{
+    res.download(path.join(__dirname,"public",`${enRollNo}.docx`),"generated.docx",(err)=>{
         if(err){
-            res.status(500).json({message:"some error occures"});
+            // res.status(500).json({message:"some error occures"});
+            console.log(err)
         }
         
     })
-    fs.rm(path.join(__dirname,"public","generated.docx"),(err)=>{
-        // console.log(err)
+    fs.rm(path.join(__dirname,"public",`${enRollNo}.docx`),(err)=>{
+        console.log(err)
     })
 
 })
