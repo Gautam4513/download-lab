@@ -2,7 +2,7 @@
 const button = document.getElementById("submit")
 const form = document.getElementById("form")
 const subjectAvilable = {
-    WP:["GX1","GY2"]
+    WP:["GX1","GY2","GY1"]
 }
 const subjectSelect = document.getElementById("subject");
 const subjectAvilableArray = Object.keys(subjectAvilable);
