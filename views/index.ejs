@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/output.css">
+</head>
+<body class="dark:bg-gray-800">
+    <div class="w-full px-2 py-2  flex justify-center items-center">
+        <h1 class="mb-4  text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Download Lab Manual</h1>
+    </div>
+   
+<div class="px-2">
+
+
+<form id="form" class="max-w-sm mx-auto">
+    <div class="mb-5">
+        <label for="subject" class="block mb-2 text-sm font-medium  text-gray-900 dark:text-white">Select a Lab manual</label>
+  <select id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+    <option value="none" selected>Choose a Lab manual</option>
+  </select>
+    </div>
+    <div class="mb-5">
+      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
+      <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="enter your name" required />
+    </div>
+    <div class="mb-5">
+      <label for="enRollNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter Your Enrollment Number</label>
+      <input type="number" id="enRollNumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="enter your enrollment number" required />
+    </div>
+ 
+      <div class="mb-5">
+        <label for="batch" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select Batch</label>
+        <select id="batch" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+          <option value="none" selected>Choose  Batch</option>
+          <option value="GX1">GX1</option>
+          <option value="GX2">GX2</option>
+          <option value="GX3">GX3</option>
+          <option value="GX4">GX4</option>
+          <option value="GY1">GY1</option>
+          <option value="GY2">GY2</option>
+          <option value="GY3">GY3</option>
+          <option value="GY4">GY4</option>
+          <option value="GZ1">GZ1</option>
+          <option value="GZ2">GZ2</option>
+          <option value="GZ3">GZ3</option>
+          <option value="GZ4">GZ4</option>
+        </select>
+      </div>
+   
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Generate</button>
+  </form>
+  <div class="w-full px-10 mt-10 flex justify-center items-center ">
+    <p id="error" class="text-red-500 font-bold"></p>
+  </div>
+</div>
+
+  <script type="module" src="./script/script.js"></script>
+</body>
+</html>
