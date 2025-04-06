@@ -1,5 +1,5 @@
 
-
+const button = document.getElementById("submit")
 const form = document.getElementById("form")
 const subjectAvilable = {
     WP:["GX2","GY2","GZ2"]
@@ -38,6 +38,8 @@ const handleError =(message)=>{
 }
 form.addEventListener("submit",async (e)=>{
     e.preventDefault();
+    button.innerText = "Generating file..."
+    button.disabled = true;
     const subject = document.getElementById("subject").value;
     const studentName = document.getElementById("name").value;
     const enRollNumber = document.getElementById("enRollNumber").value;
@@ -85,6 +87,8 @@ form.addEventListener("submit",async (e)=>{
 
         // Free up memory
         window.URL.revokeObjectURL(url);
+        button.innerText = "Generate";
+        button.disabled = false;
     } catch (error) {
         handleError(error.message);
         console.error("Error downloading file:", error.message);
