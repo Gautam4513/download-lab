@@ -6,6 +6,7 @@ import * as fs from "fs"
 import PizZip from 'pizzip'
 import Docxtemplater from 'docxtemplater'
 import { generateFile } from './utils/genarateFile.js'
+import cors from 'cors'
 
 const fileAvilabe ={
     WP:["GY2","GX2","GZ2"]
@@ -17,6 +18,9 @@ console.log(__dirname)
 const app = express();
 
 app.set("view engine","ejs")
+app.use(cors({
+    origin: 'https://download-lab.onrender.com' // only allow from your React frontend
+  }));
 app.use(express.json());
 app.use(express.urlencoded({extended:true,}));
 app.use(express.static(path.join(__dirname,"public")));

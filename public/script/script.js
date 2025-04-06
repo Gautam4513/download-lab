@@ -52,7 +52,7 @@ form.addEventListener("submit",async (e)=>{
         return;
     }
     try {
-        const response = await fetch("http://localhost:3000/getFile", {
+        const response = await fetch("https://download-lab.onrender.com/getFile", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
